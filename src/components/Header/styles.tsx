@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
 	container: {
 		flexDirection: 'row',
 		justifyContent: 'space-between',
-		paddingHorizontal: 20
+		paddingHorizontal: 25,
+		paddingBottom: 20
 	},
 	textContainer: {
 		paddingRight: 10

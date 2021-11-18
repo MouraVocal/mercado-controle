@@ -1,38 +1,38 @@
+import React, { useState } from 'react';
+
+//Expo
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Home } from './src/screens/Home';
+
+//Expo Google Fonts
 import AppLoading from 'expo-app-loading';
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 
+//React Native Paper lib
+import { Provider as PaperProvider } from 'react-native-paper';
+import { BottomTabRoutes } from './src/Routes/BottomTabRoutes';
+import { LoginRoutes } from './src/Routes/LoginRoutes';
+
 export default function App() {
+
+	const [isLoggedIn, setIsLoggedIn] = useState(true);
 
 	const [fontsLoaded] = useFonts({
 		Roboto_400Regular,
 		Roboto_700Bold
 	});
 
-	const Stack = createNativeStackNavigator();
-
 	if(!fontsLoaded) {
 		return <AppLoading />;
 	} else {
 		return (
-			<>
+			<PaperProvider>
 				<StatusBar
 					style='auto'
 					translucent={true}
 					backgroundColor='transparent'
 				/>
-				<NavigationContainer>
-					<Stack.Screen
-						name='Home'
-						component={Home}
-					/>
-				</NavigationContainer>
-				<Home />
-			</>
+				{isLoggedIn ? <BottomTabRoutes /> : <LoginRoutes />}		
+			</PaperProvider>
 		);
 	}	
 }

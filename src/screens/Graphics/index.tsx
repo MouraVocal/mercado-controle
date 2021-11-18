@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export function SignUpScreen() {
+export default function GraphicsScreen() {
 	return (
 		<View>
-			<Text>SignUpScreen</Text>
+			<Text>Relatórios</Text>
 		</View>
 	);
 }
