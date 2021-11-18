@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "mercadocontrole",
+    "slug": "mercadocontrole",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "mercadocontrole"
+}
