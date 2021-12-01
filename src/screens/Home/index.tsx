@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 //Components
 import { Header } from '../../components/Header';
@@ -9,6 +9,8 @@ import { styles } from './styles';
 
 //React Native Paper
 import { Searchbar } from 'react-native-paper';
+import { ProductInput } from '../../components/ProductInput';
+import { ProductList } from '../../components/ProductList/Index';
 
 export function Home() {
 
@@ -23,7 +25,8 @@ export function Home() {
 				value={query}
 				style={{width: '90%', alignSelf: 'center'}}
 			/>
-			<Text>Produto, preço, loja</Text>
+			<ProductInput />
+			<ProductList />
 		</View>
 	);
 }

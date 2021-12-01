@@ -11,6 +11,7 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 import { Provider as PaperProvider } from 'react-native-paper';
 import { BottomTabRoutes } from './src/Routes/BottomTabRoutes';
 import { LoginRoutes } from './src/Routes/LoginRoutes';
+import { COLORS } from './src/theme';
 
 export default function App() {
 
@@ -29,7 +30,7 @@ export default function App() {
 				<StatusBar
 					style='auto'
 					translucent={true}
-					backgroundColor='transparent'
+					backgroundColor={COLORS.WHITE}
 				/>
 				{isLoggedIn ? <BottomTabRoutes /> : <LoginRoutes />}		
 			</PaperProvider>

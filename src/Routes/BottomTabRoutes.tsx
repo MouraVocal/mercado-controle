@@ -20,24 +20,27 @@ export function BottomTabRoutes() {
 				barStyle={{ backgroundColor: COLORS.DARK_BLUE }}
 			>
 				<Tab.Screen
-					name="Histórico"
+					name="Historic"
 					component={GraphicsScreen}
 					options={{
 						tabBarIcon: ({ color })=> (<AntDesign name="linechart" size={23} color={color} />),
+						tabBarLabel: 'Histórico'
 					}}
 				/>
 				<Tab.Screen
-					name="Início"
+					name="Home"
 					component={Home}
 					options={{
 						tabBarIcon: ({ color })=> <AntDesign name="home" size={23} color={color} />,
+						tabBarLabel: 'Início'
 					}}
 				/>
 				<Tab.Screen
-					name="Ofertas"
+					name="Sales"
 					component={SalesScreen}
 					options={{
 						tabBarIcon: ({ color })=> <AntDesign name="wallet" size={23} color={color} />,
+						tabBarLabel: 'Ofertas'
 					}}
 					
 				/>
