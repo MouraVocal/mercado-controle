@@ -7,19 +7,17 @@ export function ProductList() {
 	const products = [
 		{
 			id: 1,
-			description: 'pera',
-			photo: 'teste',
-			valor: 12,
+			description: 'Pera',
+			photo: 'https://images.pexels.com/photos/568471/pexels-photo-568471.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+			valor: 15,
 			store: 'Wal Mart',
-			date: Date.now(),
 		},
 		{
 			id: 2,
-			description: 'maçã',
-			photo: 'teste',
+			description: 'Maçã',
+			photo: 'https://images.pexels.com/photos/6157055/pexels-photo-6157055.jpeg?cs=srgb&dl=pexels-laker-6157055.jpg&fm=jpg',
 			valor: 12,
 			store: 'Carrefour',
-			date: Date.now(),
 		}
 	];
 

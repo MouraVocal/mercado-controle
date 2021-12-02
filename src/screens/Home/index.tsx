@@ -25,7 +25,6 @@ export function Home() {
 				value={query}
 				style={{width: '90%', alignSelf: 'center'}}
 			/>
-			<ProductInput />
 			<ProductList />
 		</View>
 	);

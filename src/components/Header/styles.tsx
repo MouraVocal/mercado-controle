@@ -20,5 +20,11 @@ export const styles = StyleSheet.create({
 		fontFamily: FONTS.BOLD,
 		textAlignVertical: 'center',
 		fontSize: 20
+	},
+	asking: {
+		fontFamily: FONTS.REGULAR,
+		fontSize: 12,
+		textAlign: 'center',
+		marginBottom: 5
 	}
 });

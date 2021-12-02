@@ -1,5 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { IconButton } from 'react-native-paper';
+import { COLORS } from '../../theme';
+import { styles } from './styles';
 
 interface IProductProps {
 	id: number;
@@ -7,24 +11,31 @@ interface IProductProps {
 	photo: string;
 	valor: number;
 	store: string;
-	date: number;
 }
 
 interface Props {
 	product: IProductProps;
 }
 
-export const ProductCard: React.FC<Props> = ({ product }) => {
-
-	const createdTime = new Date(product.date).toLocaleTimeString();
-	
+export const ProductCard: React.FC<Props> = ({ product }) => {	
 	return (
-		<View>
-			<Text>{createdTime}</Text>
-			<Text>{product.id}</Text>
-			<Text>{product.description}</Text>
-			<Text>{product.photo}</Text>
-			<Text>{product.store}</Text>
+		<View style={styles.container}>
+			<View style={styles.centeredView}>
+				<Image source={{uri: product.photo}} style={styles.image} />
+			</View>
+			<View style={styles.detailsContainer}>
+				<Text style={styles.title}>{product.description}</Text>
+				<Text style={styles.description}>Preço Médio: R$ {product.valor}</Text>
+			</View>
+			<View style={styles.centeredView}>
+				<TouchableOpacity>
+					<IconButton 
+						icon='playlist-plus'
+						color={COLORS.DARK_BLUE}
+						size={30}
+					/>
+				</TouchableOpacity>
+			</View>
 		</View>
 	);
 };
